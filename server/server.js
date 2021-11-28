@@ -1,6 +1,5 @@
 const express = require("./config/express.js"),
   mongoose = require("mongoose");
-cron = require("node-cron");
 
 //Cria conecxão com o redis
 const redis = require('redis');
