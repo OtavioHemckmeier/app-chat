@@ -28,7 +28,7 @@ mongoose.connect(process.env.DB_URI || require("./config/config").db.uri, {
 const connection = mongoose.connection;
 
 // Descomentando o publisher abaixo, o servidor irá publicar os eventos no redis através dos eventos capturados na collection "messages"
-// Atualmente está publucando no redis através do controller addMessage em controllers/messageController.js
+// Atualmente está publicando no redis através do controller addMessage em controllers/messageController.js
 connection.once("open", () => {
   console.log("MongoDB database connected");
 
