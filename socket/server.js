@@ -11,7 +11,7 @@ const subscriber = redis.createClient({
     host: "localhost"
 });
 
-// Inicioa conexão websocket
+// Inicio conexão websocket
 io.of("/api/socket").on("connection", (socket) => {
     console.log("socket.io: User connected: ", socket.id);
     socket.emit("newConnection", socket.id)
@@ -26,7 +26,7 @@ subscriber.on("message", (channel, message) => {
     io.of("/api/socket").emit(channel, JSON.parse(message));
 })
 
-// Determina quais sao os canais que o redir vai se increver pra
+// Determina quais sao os canais que o redir vai se increver
 subscriber.subscribe("newMessage");
 
 // Inícia o server

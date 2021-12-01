@@ -1,6 +1,6 @@
 const Message = require("../models/Message");
 
-// Raliza conexão com o redis
+// Realiza conexão com o redis
 const redis = require('redis');
 const publisher = redis.createClient({
   port: 6379,
