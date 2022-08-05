@@ -26,7 +26,7 @@ subscriber.on("message", (channel, message) => {
     io.of("/api/socket").emit(channel, JSON.parse(message));
 })
 
-// Determina quais sao os canais que o redir vai se increver
+// Determina quais sao os canais que o redis vai se increver
 subscriber.subscribe("newMessage");
 
 // Inícia o server
